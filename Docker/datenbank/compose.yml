@@ -1,0 +1,36 @@
+---
+version: '3'
+networks:
+  mynet:
+    external: true
+services:
+  db:
+    image: mysql
+    networks:
+      - mynet
+    container_name: db
+    hostname: db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${ENCRYPTED_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ${DOCKER_DATA}/mysql/database:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    hostname: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    depends_on:
+      - db
+    networks:
+      - mynet
+    ports:
+      - "8081:80"
