@@ -1,0 +1,25 @@
+---
+version: "3.9"
+networks:
+  mynet:
+    name: mynet
+    external: true
+services:
+  web:
+    container_name: web
+    hostname: web
+    networks:
+      - mynet
+    image: webdevops/php-nginx:7.1-alpine
+    ports:
+      - "8082:80"
+    volumes:
+      - /dockerdata/web/nginx:/app/web
+      - /srv/f2b038bd-5522-4908-935e-bc494c5b13ab/Downloads/Test/LArchiv/Downloads:/app/Downloads
+    environment:
+      - WEB_DOCUMENT_INDEX=index.php index.html
+      - PHP_DISPLAY_ERRORS=1
+      - ENCRYPTED_PASSWORD=${ENCRYPTED_PASSWORD}
+      - MARIADB_USER=${DATABASE_USER}
+      - MARIADB_PASSWORD=${ENCRYPTED_PASSWORD}
+    restart: unless-stopped

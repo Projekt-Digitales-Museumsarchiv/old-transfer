@@ -1,0 +1,34 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Literaturarchiv:
+    - Elektronisches Archiv:
+        href: http://gen6.fritz.box:8082/Downloads/
+        description: Zum Anschauen und Herunterladen
+#        server: my-docker
+#        container: web
+    - Videoarchiv:
+        href: http://gen6.fritz.box:8096
+        description: Unsere Videosammlung aufbereitet mit Jellyfin
+#        server: my-docker
+#        container: jellyfin
+    - Katalog:
+        href: http://gen6.fritz.box:8082/web/urlaub/
+        description: Zum Nachschlagen unseres Ordnungssystems und zum Finden von Gegenständen
+
+- Administration:
+    - Datenbank:
+        href: http://gen6.fritz.box:8081/
+        description: phpMyAdmin
+#        server: my-docker
+#        container: db
+    - Adminer:
+        href: http://gen6.fritz.box:8080/
+        description: adminer
+    - Betriebssystem:
+        href: http://gen6.fritz.box:10000/
+        description: OpenMediaVault V6
+    - Server/ILO:
+        href: https://ilocz1645005r.fritz.box/
+        description: HP ILO Server Administration

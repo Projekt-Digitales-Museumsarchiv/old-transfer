@@ -1,0 +1,42 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/bookmarks
+
+- Verein:
+    - Vereins-Homepage:
+        - abbr: SFN
+          href: https://sfnbg.de/
+    - Projekt Zepplinwagen TW144:
+        - abbr: 144
+          href: https://tw144.sfnbg.de/
+    - Projekt Beiwagen BW1023:
+        - abbr: 1023
+          href: https://bw1023.sfnbg.de/
+
+- Nürnberg:
+    - Verkehrs-Aktiengesellschaft Nürnberg:
+        - abbr: VAG
+          href: https://vag.de/
+    - Verkehrsverbund Großraum Nürnberg:
+        - abbr: VGN
+          href: https://vgn.de/
+    - infra Fürth:
+        - abbr: F
+          href: https://www.infra-fuerth.de/privatkunden
+    - Erlanger Stadtwerke:
+        - abbr: ER
+          href: https://stadtbus.estw.de/
+
+- Sonstiges:
+    - Jans Modellstraßenbahnseiten:
+        - abbr: Jan
+          href: http://modelltram.de
+    - Halling:
+        - abbr: LH
+          href: https://halling.at
+    - Verband deutscher Verkehrsunternehmen:
+        - abbr: VDV
+          href: https://vdv.de
+    - DB:
+        - abbr: DB
+          href: https://bahn.de

@@ -5,18 +5,22 @@ networks:
     external: true
 services:
   db:
-    image: mysql
+    image: mariadb
     networks:
       - mynet
     container_name: db
     hostname: db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${ENCRYPTED_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${ENCRYPTED_PASSWORD}
+      MARIADB_DATABASE: ${DATABASE_NAME}
+      MARIADB_USER: ${DATABASE_USER}
+      MARIADB_PASSWORD: ${ENCRYPTED_PASSWORD}
+      TZ: ${TZ}
     ports:
       - "3306:3306"
     volumes:
-      - ${DOCKER_DATA}/mysql/database:/var/lib/mysql
+      - ${DOCKER_DATA}/mariadb/database:/var/lib/mysql
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: pma
@@ -34,3 +38,12 @@ services:
       - mynet
     ports:
       - "8081:80"
+  adminer:
+    image: adminer
+    container_name: adminer
+    hostname: adminer
+    restart: always
+    networks:
+      - mynet
+    ports:
+      - "8080:8080"
