@@ -2,9 +2,9 @@
 // nach Zeile 569
 
 if (!isset($dbinfo['password'])) {
-$dbinfo['password'] = getenv('ENCRYPTED_PASSWORD');
+$dbinfo['password'] = getenv('MARIADB_PASSWORD');
 }
 if (!isset($dbinfo['user'])) {
-$dbinfo['user'] = getenv('DATABASE_USER');
+$dbinfo['user'] = getenv('MARIADB_USER');
 }
 
