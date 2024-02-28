@@ -1,5 +1,4 @@
-<?php /** @noinspection ALL */
-/** @noinspection PhpUndefinedClassInspection */
+<?php
 
 // Default Sortierung fuer Aufenthalte
 ;if ( !isset($_REQUEST['-sort']) and @$_REQUEST['-table'] == 'aufenthalt' ){
