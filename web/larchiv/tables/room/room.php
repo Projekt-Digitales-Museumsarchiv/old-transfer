@@ -10,4 +10,8 @@ class tables_room {
     {
         return CONCAT('Raum ',room);
     }
+
+    function room__display($record) {
+        return 'Raum '.$record->val('room');
+    }
 }

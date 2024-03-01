@@ -6,6 +6,10 @@ class tables_locker {
         else return ' ';
     }
 
+    function locker__display($record) {
+        return 'Schrank '.$record->val('locker');
+    }
+
     function getTitle($record)
     {
         return 'Schrank '.$record->val('locker');
