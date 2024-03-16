@@ -14,7 +14,7 @@
 #        server: my-docker
 #        container: jellyfin
     - Katalog:
-        href: http://gen6.fritz.box:8082/web/urlaub/
+        href: http://gen6.fritz.box:8082/web/larchiv/
         description: Zum Nachschlagen unseres Ordnungssystems und zum Finden von Gegenständen
 
 - Administration:
